@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pag.css">
+    <title>Mariana Calçados</title>
+</head>
+<body>
+<div class="product-container">
+    <div class="image-slider">
+        <img src="img/socialpreta.jpg" alt="Sandália Papete 1">
+        <!--<img src=" alt="Sandália Papete 2">-->
+        <!-- Adicione mais imagens conforme necessário -->
+    </div>
+    <!--<div class="navigation">
+        <button class="prev-btn" onclick="changeSlide(-1)">❮ Anterior</button>
+        <button class="next-btn" onclick="changeSlide(1)">Próxima ❯</button>
+    </div>-->
+    <div class="product-info">
+        <h1>Sandalia Social de Salto Elegance</h1>
+
+        <!--<p>Eleve seu estilo com a Sandalia Social de Salto Elegance, um toque de sofisticação para seus pés. Desenhada para ocasiões especiais, esta sandália combina elegância, conforto e charme em cada passo.</p>
+
+        <h2>Características Principais:</h2>
+
+        <p><b>Altura e Elegância:</b> O salto da Sandalia Elegance oferece altura e elegância, tornando-a perfeita para eventos sociais e noites especiais. Destaque-se com um toque de glamour em cada passo.</p>
+
+        <p><b>Conforto em Destaque:</b> Apesar do salto, a Sandalia Elegance prioriza o conforto. Sua palmilha almofadada proporciona suavidade a cada passada, permitindo que você desfrute do evento sem abrir mão do bem-estar.</p>
+
+        <p><b>Design Versátil:</b> O design versátil da Sandalia Elegance a torna ideal para diversas ocasiões, desde festas formais até eventos sociais descontraídos. Combine-a com vestidos, saias ou calças para um look impecável.</p>
+
+        <p><b>Detalhes Sofisticados:</b> Os detalhes sofisticados, como acabamentos refinados e materiais de alta qualidade, garantem que a Sandalia Elegance seja um acessório de destaque no seu guarda-roupa.</p>
+
+        <h2>Detalhes Técnicos:</h2>
+
+        <p><b>Materiais:</b> [Inserir informações sobre os materiais utilizados]</p>
+        <p><b>Cores Disponíveis:</b> [Inserir cores disponíveis]</p>
+        <p><b>Tamanhos Disponíveis:</b> [Inserir tamanhos disponíveis]</p>-->
+        <h3>Preço: R$120.00</h3>
+
+        <a href="https://api.whatsapp.com/send?phone=5562994941754&text=Tenho%20interesse%20nessa%20sandália.%20Poderia%20me%20passar%20mais%20informações%3F%20https%3A%2F%2Finstagram.com/p/C0M7hOPpZpf/" target="_blank" class="saiba-mais-btn">Saiba Mais no WhatsApp</a>
+        <a href="index.html"><button class="back">Voltar</button></a>
+    </div>
+    <br>
+</div>
+<script>
+    let currentSlide = 1;
+
+    function showSlide(n) {
+        const slides = document.querySelectorAll('.image-slider img');
+        if (n > slides.length) { currentSlide = 1 }
+        if (n < 1) { currentSlide = slides.length }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[currentSlide - 1].style.display = "block";
+    }
+
+    function changeSlide(n) {
+        showSlide(currentSlide += n);
+    }
+
+    // Exibir a primeira imagem quando a página carrega
+    window.onload = function () {
+        showSlide(currentSlide);
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pag.css">
+    <title>Mariana Calçados</title>
+</head>
+<body>
+<div class="product-container">
+    <div class="image-slider">
+        <img src="img/Design sem nome (2).jpg" alt="Sandália Papete 1">
+        <img src="img/Design sem nome (3).jpg" alt="Sandália Papete 2">
+        <!-- Adicione mais imagens conforme necessário -->
+    </div>
+    <div class="navigation">
+        <button class="prev-btn" onclick="changeSlide(-1)">❮ Anterior</button>
+        <button class="next-btn" onclick="changeSlide(1)">Próxima ❯</button>
+    </div>
+    <div class="product-info">
+        <h1>Sandalia Flex</h1>
+
+        <!--<p>Experimente o equilíbrio perfeito entre estilo e conforto com a Sandália Flex. Projetada para quem busca mais do que apenas um calçado, ela é uma declaração de moda que abraça seus pés com o máximo de conforto.</p>
+
+        <h2>Características Principais:</h2>
+
+        <p><b>Flexibilidade Superior:</b> A Sandália Flex se adapta aos seus movimentos, proporcionando uma sensação de liberdade a cada passo. Seu design flexível permite que você aproveite o dia sem restrições.</p>
+
+        <p><b>Conforto Duradouro:</b> Desenvolvida com materiais de alta qualidade, a Sandália Flex oferece um conforto duradouro. A palmilha acolchoada e a sola flexível garantem uma experiência de uso agradável durante todo o dia.</p>
+
+        <p><b>Estilo Versátil:</b> Seja para um passeio casual ou uma ocasião especial, a Sandália Flex complementa qualquer look. Seu design moderno e elegante é a escolha perfeita para quem procura um calçado versátil.</p>
+
+        <p><b>Durabilidade e Qualidade:</b> Construída para resistir ao desgaste do tempo, a Sandália Flex é sinônimo de durabilidade e qualidade. Cada par é cuidadosamente fabricado para garantir a satisfação do cliente.</p>
+
+        <h2>Detalhes Técnicos:</h2>
+
+        <p><b>Materiais:</b> [Inserir informações sobre os materiais utilizados]</p>
+        <p><b>Cores Disponíveis:</b> [Inserir cores disponíveis]</p>
+        <p><b>Tamanhos Disponíveis:</b> [Inserir tamanhos disponíveis]</p>-->
+        <h3>Preço: R$150.00</h3>
+        <a href="https://api.whatsapp.com/send?phone=5562994941754&text=Tenho%20interesse%20nessa%20sandália.%20Poderia%20me%20passar%20mais%20informações%3F%20https%3A%2F%2Finstagram.com/p/C0M7ZnxplFP/" target="_blank" class="saiba-mais-btn">Saiba Mais no WhatsApp</a>
+        <a href="index.html"><button class="back">Voltar</button></a>
+    </div>
+    <br>
+</div>
+<script>
+    let currentSlide = 1;
+
+    function showSlide(n) {
+        const slides = document.querySelectorAll('.image-slider img');
+        if (n > slides.length) { currentSlide = 1 }
+        if (n < 1) { currentSlide = slides.length }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[currentSlide - 1].style.display = "block";
+    }
+
+    function changeSlide(n) {
+        showSlide(currentSlide += n);
+    }
+
+    // Exibir a primeira imagem quando a página carrega
+    window.onload = function () {
+        showSlide(currentSlide);
+    };
+</script>
+</body>
+</html>
